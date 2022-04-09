@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오버튼값 체크하기</title>
+    <script>
+        'use strict';
+        function fCheck() {
+            let gender;
+            if(document.getElementsByName ("gender")[0].checked) {    //name 은 id와 다르게 여러개 올수있어서 Elements << s가 붙음  gender가 중복이 2개있으니까 배열0번은 남자.
+                gender = "남자";                                      //0번(남자)에 체크가 되있으면 let gender값은 남자가 되서 남자에체크, 다른곳에 체크되어있으면 gender값은 여자가되어 여자에 체크.
+            }
+            else {
+                gender = "여자";
+            }
+            demo.innerHTML = "성별 : <font color='red'>"+gender+"</font>";
+        }
+        function fClose() {
+            demo.innerHTML="";
+        }
+    </script>
+
+</head>
+<body>
+    <form>
+        <input type="radio" name="gender" id="gender" value="남자" checked/>남자
+        <input type="radio" name="gender" id="gender2" value="여지"/>여자 &nbsp;&nbsp;
+        <input type="button" value="값체크" onclick="fCheck()"/>
+        <div id="demo"></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        'use strict';
+        let list ="제 1조(회원의 구분) 회원은 비회원, 준회원, 정회원으로 구분한다.<br/>-“비회원”은 상담중이거나 상담 후 가입(입회)가 이뤄지지 않은 회원, 탈퇴한 회원을 의미한다.<br/>-“준회원”은 가입(입회) 후 1개월 이상 활동이 없거나, 휴강 또는 연기중인 회원을 의미한다.-“정회원”은 가입(입회) 후 현재 활동이 진행중에 있는 회원을 의미한다.";
+        function fCheck() {
+            if(document.getElementById("list").checked == false) {
+                demo.innerHTML = list + "<br/><input type='button' value='닫기' onclick='fClear()'/>"
+            }
+            else {
+                demo.innerHTML = list +  "<br/><input type='button' value='닫기' onclick='fClear()'/>"
+            }
+        }
+
+        function fClear() {
+            demo.innerText = "";
+        }
+        function fCheck2() {
+            if(document.getElementById("list").checked == false) {
+                alert("약관에 동의해주세요.");
+            }
+            else {
+                alert("가입에 성공하였습니다.");
+            }
+        }
+    </script>
+</head>
+<style>
+    #div1 {
+        border:solid 1px;
+        width: 500px;
+        padding: 10px;
+        
+    }
+    .div2 {
+        font-weight:bold;
+        margin:20px 0px;
+    }
+    span {
+        margin-left: 400px;
+    }
+</style>
+<body>
+    <div id="div1">
+        <h2>회원약관</h2>
+        <form action="#">
+        <fieldset>
+            <div class="div2">이름<input type="text" name="name" autofocus required ></div>
+            <div class="div2">아이디<input type="text" name="id"/></div>
+            <div class="div2">비밀번호<input type="password" name="pwd"/></div>
+            <div class="div2">
+                <input type="checkbox" name="list" id="list" value="동의"  />약관에 동의하시면 체크를 해주세요
+                <input type="button" value="약관보기" id="signup" onclick="fCheck()"/>
+            </div>
+            <div class="div2">
+                <span><input type="button" value="가입하기"  onclick="fCheck2()"/></span>
+            </div>
+        </fieldset>
+    </div>    
+    </form>
+
+    <div id="demo"></div>
+</body>
+</html>

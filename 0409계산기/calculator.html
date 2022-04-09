@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="calculator.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
+</head>
+<style>
+    #container {
+        width:500px;
+        height: 600px;
+        margin: 0px auto;
+        border: solid 3px;
+        padding: 10px;
+        background-color: rgb(203, 218, 231);
+    }
+
+    #result {
+        width: 500px;
+        height: 100px;
+        /* background-color: white; */
+    }
+
+    #box {
+        margin: 5px auto;
+    }
+
+    #rs {
+        width: 480px;
+        height: 90px;
+        font-size: 70px;
+        text-align: right;
+    }
+
+    #input {
+        border: solid 1px;
+        width: 500px;
+        height: 500px;
+        background-color: white;
+    }
+
+    #number {
+        width: 350px;
+        height: 500px;
+        float: left;
+    }
+
+    #cal {
+        width: 140px;                   
+        height: 500px;
+        float: left;
+    }
+
+    .num {
+        padding: 10px;
+        height: 470px;
+    }
+    
+    .numstyle {
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+        border-radius: 20px;
+        margin: 14px 1px;
+    }
+
+    .calstyle {
+        width: 90px;
+        height: 80px;
+        font-size: 50px;
+        border-radius: 20px;
+        margin: 10px 5px 10px 25px;
+    }
+
+    #clear {
+        width: 200px;
+        height: 90px;
+        margin: 0px 10px;
+        font-size: 40px;
+        border-radius: 10px;
+    }
+
+</style>
+
+<body>
+    <div id="container">
+        <div id="result">
+            <div id="box">
+                <input type="text" id="rs" name="rs"  onmouseover="big()" onmouseout="small()">
+            </div>
+        </div>
+        <div id="input">
+            <div id="number">
+                <div class="num">
+                    <input type="button" onclick="calculator1()"  id="run1" class="numstyle" value="1" />
+                    <input type="button" onclick="calculator2()"  id="run2" class="numstyle" value="2" />
+                    <input type="button" onclick="calculator3()"  id="run3" class="numstyle" value="3" />
+                    <input type="button" onclick="calculator4()" name="run" id="run4" class="numstyle" value="4" />
+                    <input type="button" onclick="calculator5()" name="run" id="run5" class="numstyle" value="5" />
+                    <input type="button" onclick="calculator6()" name="run" id="run6" class="numstyle" value="6" />
+                    <input type="button" onclick="calculator7()" name="run" id="run7" class="numstyle" value="7" />
+                    <input type="button" onclick="calculator8()" name="run" id="run8" class="numstyle" value="8" />
+                    <input type="button" onclick="calculator9()" name="run" id="run9" class="numstyle" value="9" />
+                    <input type="button" onclick="calculator0()" name="run" id="run0" class="numstyle" value="0" style="margin: 0px;" />
+                    <input type="button" onclick="calculatorclear()" name="run" id="clear" value="c l e a r" />
+                </div>
+            </div>
+            <div id="cal">
+                <input type="button" onclick="calculatorplus()" name="run" id="plus" class="calstyle" value="+"/>
+                <input type="button" onclick="calculatorminus()" name="run" id="minus" class="calstyle" value="-"/>
+                <input type="button" onclick="calculatormul()" name="run" id="mul" class="calstyle" value="x"/>
+                <input type="button" onclick="calculatordiv()" name="run" id="div" class="calstyle" value="/"/>
+                <input type="button" onclick="calculatorrs()" name="run" id="output" class="calstyle" value="=" style="width: 120px; margin-left: 15px;"/>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

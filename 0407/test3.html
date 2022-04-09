@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+        자바스크립트 주석 == 자바주석
+        //
+        /**/
+
+        ES6설치했으면 
+        clg만 쳐도 console.log가 나옴 
+        ccl만 쳐도 console.clear가 나옴(위의 콘솔들을 지워줌)
+    -->
+    <script>
+        console.log("hello1");
+        console.log("hello2");
+        // console.log("hello");
+        console.clear();
+        console.log("hello4");
+        console.log("hello5");
+        document.write("1.이곳은 자바스크립트입니다.<br/>");
+        document.write("2.이곳은 자바스크립트입니다.<br/>");
+        //함수호출 function
+        function atom() {  
+            document.write("2.이곳은 자바스크립트입니다.<br/>");
+        }
+    </script>
+</head>
+<body>
+    <p>야호</p>
+    <input type="button" value="확인"  onclick="atom()"/>  <!--onclick하면 아톰이 호출이됨 -->
+    <input type="button" value="확인"  onclick="atom2()"/>  <!--onclick하면 아톰2이 호출이됨 -->
+    <script>
+    function atom2() {  
+        document.write("2.이곳은 자바스크립트입니다.<br/>");
+    }
+    </script>
+</body>
+</html>
